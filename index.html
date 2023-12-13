@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+  <body
+    class="text-[#37394e] font-sans sm:bg-[#232742] w-screen h-screen sm:mx-auto overflow-auto"
+  >
+    <div id="front">
+      <div
+        class="sm:flex-col sm:w-full sm:h-full sm:items-center flex justify-center pt-0 sm:pt-10"
+      >
+        <main
+          class="sm:bg-[#ffffff] sm:p-4 sm:flex sm:max-w-[95%] sm:w-[750px] sm:flex-row-reverse sm:rounded-[2rem] sm:items-center sm:justify-center"
+        >
+          <div class="sm:basis-1/2">
+            <picture>
+              <source
+                media="(min-width: 640px)"
+                srcset="/assets/images/illustration-sign-up-desktop.svg"
+              />
+              <img
+                src="/assets/images/illustration-sign-up-mobile.svg"
+                class="w-screen"
+                alt="mob-svg"
+              />
+            </picture>
+          </div>
+
+          <div class="sm:sm:basis-1/2 sm:">
+            <h3 class="text-4xl py-8 pr-3 pl-7 font-bold">Stay updated!</h3>
+
+            <p class="font-normal text-sm pr-4 pl-7">
+              Join 60,000+ product managers receiving monthly updates on:
+            </p>
+
+            <ul class="pr-4 pl-7 pt-2 text-sm">
+              <li class="flex">
+                <img
+                  src="/assets/images/icon-list.svg"
+                  alt="checked"
+                  class="mr-3"
+                />
+                <p class="mt">Product discovery and building what matters</p>
+              </li>
+
+              <li class="flex mt-2">
+                <img
+                  src="/assets/images/icon-list.svg"
+                  alt="checked"
+                  class="mr-3"
+                />
+                <p class="">Measuring to ensure updates are a success</p>
+              </li>
+
+              <li class="flex mt-2">
+                <img
+                  src="/assets/images/icon-list.svg"
+                  alt="checked"
+                  class="mr-3"
+                />
+                <p>And much more!</p>
+              </li>
+            </ul>
+
+            <form class="pt-7 px-9 w-full sm:w-full">
+              <label
+                for="email"
+                class="text-xs font-bold flex justify-between pb-2"
+                >Email address
+                <span class="text-xs font-bold text-[#ed7e73]" id="re"> </span>
+              </label>
+
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="email@company.com"
+                class="border border-[#9294a1] p-3 rounded-lg w-full cursor-pointer text-sm text-[#000322] placeholder-slate-400 focus:outline-none focus:border-sky-500 active:invalid:border-[#ed7e73] bg-white focus:invalid:bg-[#fee2e2] invalid:bg-[#fee2e2] focus:invalid:text-[#ed7e73] invalid:text-[#ed7e73] focus:invalid:border focus:invalid:border-[#ed7e73] invalid:border-[#ed7e73] focus:invalid:placeholder-[#ed7e73]"
+              />
+              <button
+                class="but bg-[#232742] text-[#ffffff] text-sm rounded-md border border-[#000322] p-3 my-5 w-full hover:bg-gradient-to-r from-[#e9436e] to-[#eb5e54] hover:shadow-xl hover:shadow-[#eb5e54]/40 hover:border-[#eb5e54] cursor-pointer"
+                id="signup"
+                type="submit"
+                onclick="validation()"
+              >
+                <a>Subscribe to monthly newsletter</a>
+              </button>
+            </form>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <div
+      class="flex-col justify-between p-4 h-screen w-screen sm:px-10 sm:w-[350px] sm:mx-auto sm:my-20 sm:rounded-3xl sm:h-[400px] sm:bg-[#ffffff] sm:flex-col sm:items-center sm:justify-center hidden sm:hidden"
+      id="success"
+    >
+      <div class="mt-[4.5rem] sm:mt-0" id="subscribe">
+        <img
+          src="/assets/images/icon-success.svg"
+          alt="checked"
+          class="w-2/12 mt-7 sm:mt-0 mb-2"
+        />
+
+        <h2 class="text-4xl text-[#37394e] font-bold my-5">
+          Thanks for subscribing!
+        </h2>
+
+        <p class="font-light mb-[250px] sm:mb-0">
+          A confirmation email has been sent to
+          <span class="font-bold" id="submitted">ash@loremcompany.com</span>.
+          Please open it and click the button inside to confirm your
+          subscription.
+        </p>
+
+        <button
+          class="bg-[#232742] w-full text-[#ffffff] rounded-lg border border-[#37394e] p-3 mx sm:w-full hover:bg-gradient-to-r from-[#e9436e] to-[#eb5e54] hover:shadow-xl hover:shadow-[#eb5e54]/40 hover:border-[#eb5e54] cursor-pointer mt-5"
+        >
+          <a href="/index.html" class="">Dismiss message</a>
+        </button>
+      </div>
+    </div>
+
+    <div>
+      <h6 class="text-md pt-4 sm:text-[#ffffff] text-center">
+        Challenge by
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          class="text-[#3e52a3] hover:underline"
+          >Frontend Mentor</a
+        >. Coded by
+        <a
+          href="https://www.frontendmentor.io/profile/Vera-poms"
+          class="text-[#3e52a3] hover:underline"
+          >Vera Ama Pomaa</a
+        >.
+      </h6>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
