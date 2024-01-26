@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](newslettersubscription.netlify.app)
-- Live Site URL: [Add live site URL here](newslettersubscription.netlify.app)
+- Solution URL: (https://newslettersubscription.netlify.app)
+- Live Site URL: (https://newslettersubscription.netlify.app)
 
 ## My process
 
